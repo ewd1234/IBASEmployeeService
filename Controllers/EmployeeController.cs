@@ -14,10 +14,11 @@ namespace IBASEmployeeService.Controllers
         }
 
 
-        [HttpGet("GetEmployees")]
-        public IEnumerable<Employee> Get()
+    [HttpGet("GetEmployees")]
+    public IEnumerable<Employee> Get()
+    {
+        var employees = new List<Employee>() 
         {
-            var employees = new List<Employee>() {
             new Employee() {
                 Id = "21",
                 Name = "Mette Bangsbo",
@@ -44,10 +45,58 @@ namespace IBASEmployeeService.Controllers
                     Id = 2,
                     Name = "Support"
                 }
+            },
+            // --- 3 nye i IT ---
+            new Employee() {
+                Id = "24",
+                Name = "Sofie Nielsen",
+                Email = "soni@ibas.dk",
+                Department = new Department() {
+                    Id = 3,
+                    Name = "IT"
+                }
+            },
+            new Employee() {
+                Id = "25",
+                Name = "Lars Poulsen",
+                Email = "lapo@ibas.dk",
+                Department = new Department() {
+                    Id = 3,
+                    Name = "IT"
+                }
+            },
+            new Employee() {
+                Id = "26",
+                Name = "Camilla Hansen",
+                Email = "caha@ibas.dk",
+                Department = new Department() {
+                    Id = 3,
+                    Name = "IT"
+                }
+            },
+            // --- 2 nye i Kantinen ---
+            new Employee() {
+                Id = "27",
+                Name = "Peter Jensen",
+                Email = "peje@ibas.dk",
+                Department = new Department() {
+                    Id = 4,
+                    Name = "Kantinen"
+                }
+            },
+            new Employee() {
+                Id = "28",
+                Name = "Annette Olsen",
+                Email = "anol@ibas.dk",
+                Department = new Department() {
+                    Id = 4,
+                    Name = "Kantinen"
+                }
             }
         };
-            return employees;
-        }
+
+        return employees;
+    }
     }
 
 
