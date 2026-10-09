@@ -11,11 +11,14 @@ namespace IBASEmployeeService.Models
 
         public string? Email { get; set; }
 
+        public string LogInName { get; set; }
+
         public Department? Department { get; set; }
 
         public Employee()
         {
             this.Name = "undefined";
+            this.LogInName = "undefined";
         }
 
     }

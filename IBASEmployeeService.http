@@ -1,6 +1,11 @@
 @IBASEmployeeService_HostAddress = http://localhost:5104
 
-GET {{IBASEmployeeService_HostAddress}}/weatherforecast/
+### Hent alle medarbejdere
+GET {{IBASEmployeeService_HostAddress}}/api/Employee/GetEmployees
+Accept: application/json
+
+### Hent medarbejdere i IT-afdelingen
+GET {{IBASEmployeeService_HostAddress}}/api/Employee/GetEmployeesByDepartmentId/6
 Accept: application/json
 
 ###
